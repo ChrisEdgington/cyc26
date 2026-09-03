@@ -61,10 +61,10 @@ table.options th { opacity: 0.6; font-weight: 600; }
 .shot-img.shot-sm { max-width: 40%; }
 
 /* Last slide: two QR codes side by side */
-.qr-row { display: flex; justify-content: center; gap: 10rem; }
+.qr-row { display: flex; justify-content: center; gap: 5rem; }
 .qr { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; text-decoration: none; }
-.qr img { width: 240px; height: 240px; background: #fff; padding: 8px; border-radius: 6px; }
-.qr span { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1.4rem; opacity: 0.85; }
+.qr img { width: 220px; height: 220px; background: #fff; padding: 8px; border-radius: 6px; }
+.qr span { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1.1rem; opacity: 0.85; }
 
 /* What / Why definition lines and the four-questions slide */
 .slidev-layout .def { max-width: 82%; margin: 1.6rem auto 0; text-align: left; }

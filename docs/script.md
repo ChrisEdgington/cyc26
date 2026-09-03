@@ -486,9 +486,10 @@ First round of applause you ever got for a software demo. Pause again. Let it si
 **On the screen**
 
 > <a class="qr">[picture: QR code for pbxz.io]<span>pbxz.io</span></a>
+>   <a class="qr">[picture: QR code for the repo]<span>github.com/ChrisEdgington/cyc26</span></a>
 >   <a class="qr">[picture: QR code for x.com/EdgingtonC]<span>x.com/EdgingtonC</span></a>
 
 **Say**
 
-Section clock: 22:30. Two codes: Proxybox, and where to find me. The shell, the demo page, the mock printer, and these slides are all on my GitHub; ask me and I will send the link. Thank you.
+Section clock: 22:30. Three codes: Proxybox, the repo, and where to find me. The shell, the demo page, the mock printer, and these slides are all in the repo. Fork it. Thank you.
 

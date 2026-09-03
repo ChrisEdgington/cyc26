@@ -44,7 +44,7 @@ Watch the clock badge on the slide, not the slide count.
 | 19:45 | 26 | Then they asked the backend to print. | lock paragraph to one sentence |
 | **21:00** | 27–28 | **Close.** 9 AM. The promise. | do not cut |
 | 21:30 | 29–31 | He ran it. 3 packages, 29 seconds. They clapped. | |
-| **22:30** | 32 | QR codes: pbxz.io and x.com/EdgingtonC. | |
+| **22:30** | 32 | QR codes: pbxz.io, the repo, x.com/EdgingtonC. | |
 
 The clock badge in the corner of each of these slides shows the same target time in the presenter view. Bold rows are section starts; if you are more than a minute behind at one, take that section's cut.
 

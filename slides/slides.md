@@ -504,9 +504,10 @@ clock: "22:30"
 
 <div class="qr-row">
   <a class="qr"><img src="/qr-pbxz.png" alt="QR code for pbxz.io"><span>pbxz.io</span></a>
+  <a class="qr"><img src="/qr-repo.png" alt="QR code for the repo"><span>github.com/ChrisEdgington/cyc26</span></a>
   <a class="qr"><img src="/qr-x.png" alt="QR code for x.com/EdgingtonC"><span>x.com/EdgingtonC</span></a>
 </div>
 
 <!--
-Section clock: 22:30. Two codes: Proxybox, and where to find me. The shell, the demo page, the mock printer, and these slides are all on my GitHub; ask me and I will send the link. Thank you.
+Section clock: 22:30. Three codes: Proxybox, the repo, and where to find me. The shell, the demo page, the mock printer, and these slides are all in the repo. Fork it. Thank you.
 -->

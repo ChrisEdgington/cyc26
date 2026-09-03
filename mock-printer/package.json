@@ -1,0 +1,12 @@
+{
+  "name": "mock-printer",
+  "private": true,
+  "type": "module",
+  "description": "Pretends to be a network label printer: raw TCP on 9100 and HTTP POST /pstprnt on 9101. Shows what it received on a panel at :9102 and can forward each job to a proxybox so a real label comes out.",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

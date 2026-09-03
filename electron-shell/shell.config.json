@@ -1,0 +1,16 @@
+{
+  "appUrl": "https://cyc26-shipping.pages.dev/",
+  "devUrl": "https://cyc26-shipping.pages.dev/",
+  "fullscreen": false,
+  "allowedOrigins": [
+    "https://cyc26-shipping.pages.dev",
+    "http://localhost:8080"
+  ],
+  "proxyAllowlist": [
+    "https://api.labelary.com"
+  ],
+  "printers": {
+    "allowPrivateRanges": true,
+    "hosts": []
+  }
+}

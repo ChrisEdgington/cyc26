@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>mock printer</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #121212; color: #eee; font: 16px/1.4 system-ui, sans-serif; }
+  header { padding: 1rem 1.5rem; opacity: .6; display: flex; justify-content: space-between; font-family: ui-monospace, Menlo, monospace; font-size: .9rem; }
+  main { display: grid; place-items: center; min-height: calc(100vh - 4rem); padding: 1rem; }
+  .idle { opacity: .35; font-size: 2rem; }
+  .job { text-align: center; }
+  .stamp { font-size: 4rem; font-weight: 800; letter-spacing: .04em; color: #7dff9b; animation: pop .5s ease-out; }
+  @keyframes pop { from { transform: scale(.6); opacity: 0 } to { transform: scale(1); opacity: 1 } }
+  .meta { opacity: .6; font-family: ui-monospace, Menlo, monospace; margin: .5rem 0 1rem; }
+  img { max-width: min(90vw, 480px); border: 1px solid #333; background: #fff; }
+  pre { text-align: left; max-width: 90vw; max-height: 50vh; overflow: auto; background: #1c1c1c; padding: 1rem; border-radius: 6px; font-size: .85rem; }
+  .fwd { font-family: ui-monospace, Menlo, monospace; font-size: .9rem; opacity: .7; margin-top: .5rem; }
+</style>
+</head>
+<body>
+<header><span>mock zebra · tcp :9100 · http :9101/pstprnt</span><span id="fwd"></span></header>
+<main id="main"><div class="idle">waiting for a job…</div></main>
+<script>
+  let lastId = 0
+  async function tick() {
+    try {
+      const r = await fetch('/jobs', { cache: 'no-store' })
+      const { forward, jobs } = await r.json()
+      document.getElementById('fwd').textContent = forward ? 'forward: ' + forward : 'forward: off'
+      const job = jobs[0]
+      if (!job) return
+      if (job.id !== lastId || job.render || job.forwarded) render(job)
+      lastId = job.id
+    } catch {}
+  }
+  function render(job) {
+    const main = document.getElementById('main')
+    const esc = (s) => s.replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]))
+    main.innerHTML = `
+      <div class="job">
+        <div class="stamp">PRINTED</div>
+        <div class="meta">#${job.id} · ${job.bytes} bytes · ${job.source} · ${job.at.slice(11, 19)}</div>
+        ${job.render ? `<img src="${job.render}" alt="label">` : `<pre>${esc(job.zpl)}</pre>`}
+        ${job.forwarded ? `<div class="fwd">forwarded → ${job.forwarded.status}</div>` : ''}
+      </div>`
+  }
+  setInterval(tick, 500)
+  tick()
+</script>
+</body>
+</html>

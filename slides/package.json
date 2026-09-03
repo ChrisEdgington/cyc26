@@ -1,0 +1,15 @@
+{
+  "name": "slides",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export --output slides-export.pdf --with-clicks",
+    "script": "node script.mjs"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.19.1",
+    "@slidev/theme-default": "^0.25.0"
+  }
+}

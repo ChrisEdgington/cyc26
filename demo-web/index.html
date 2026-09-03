@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shipping Station</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header>
+  <span class="brand">Shipping Station</span>
+  <span id="bridge" class="pill">checking bridge…</span>
+  <span id="timer" class="timer">0.0 s</span>
+</header>
+
+<main>
+  <form id="ship" autocomplete="off">
+    <label>
+      <span>Shipment ID</span>
+      <input id="shipmentId" name="shipmentId" placeholder="SH-1001" autofocus required>
+    </label>
+
+    <section id="details" class="details" hidden>
+      <div class="row"><span>Order</span><b id="order"></b></div>
+      <div class="row"><span>Ship to</span><b id="shipTo"></b></div>
+      <div class="row"><span>Service</span><b id="service"></b></div>
+    </section>
+
+    <fieldset id="pkg" disabled>
+      <label><span>Weight (lb)</span><input id="weight" inputmode="decimal" placeholder="12.4"></label>
+      <div class="dims">
+        <label><span>L</span><input id="len" inputmode="numeric" placeholder="18"></label>
+        <label><span>W</span><input id="wid" inputmode="numeric" placeholder="12"></label>
+        <label><span>H</span><input id="hgt" inputmode="numeric" placeholder="10"></label>
+      </div>
+    </fieldset>
+
+    <p class="hint">Enter moves on. Enter on the last field ships it. There is no print button.</p>
+  </form>
+
+  <section class="status">
+    <div id="statusLine" class="status-line">Ready.</div>
+    <pre id="log" class="log"></pre>
+  </section>
+</main>
+
+<details class="settings">
+  <summary>printer</summary>
+  <label><span>host</span><input id="printerHost" placeholder="192.168.1.50"></label>
+  <label><span>port</span><input id="printerPort" placeholder="9100"></label>
+  <p class="tiny">In a browser tab the page can only try an HTTP POST (port 80 on a Zebra). Inside the shell <code>window.deviceBridge</code> writes raw TCP (port 9100).</p>
+</details>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>

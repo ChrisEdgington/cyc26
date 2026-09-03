@@ -1,0 +1,35 @@
+{
+  "name": "electron-shell",
+  "productName": "Device Bridge",
+  "version": "0.1.0",
+  "description": "An Electron shell that loads your HTTPS web app and gives it a small, explicit bridge to local devices: raw-socket printing, an HTTP proxy, and USB HID.",
+  "main": "./dist/main.js",
+  "license": "MIT",
+  "author": "Chris Edgington",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "pnpm build && electron-forge start",
+    "package": "pnpm build && electron-forge package",
+    "make": "pnpm build && electron-forge make",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "node-hid": "^3.4.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.11.2",
+    "@electron-forge/maker-dmg": "^7.11.2",
+    "@electron-forge/maker-squirrel": "^7.11.2",
+    "@electron-forge/maker-zip": "^7.11.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.11.2",
+    "@electron-forge/shared-types": "^7.11.2",
+    "@types/node": "^26.4.0",
+    "electron": "^44.1.0",
+    "esbuild": "^0.28.2",
+    "rimraf": "^6.1.3",
+    "typescript": "^7.0.2"
+  }
+}

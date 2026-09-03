@@ -1,0 +1,18 @@
+{
+  "name": "cyc26",
+  "private": true,
+  "description": "Your Browser Has Trust Issues — Commit Your Code 2026. Slides, the Electron shell, a demo page, and a mock printer.",
+  "scripts": {
+    "slides": "pnpm --filter slides dev",
+    "slides:export": "pnpm --filter slides export",
+    "script": "pnpm --filter slides script",
+    "shell": "pnpm --filter electron-shell start",
+    "web": "pnpm --filter demo-web dev",
+    "web:deploy": "pnpm --filter demo-web deploy",
+    "printer": "pnpm --filter mock-printer start"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.17.0+sha512.cca3cea332ad254bb84145f966d19f4879615210346fc92c79a047f23a0d7b3cca3c3792f0076ba1f1831d277efbcf0a9119b31a9a60eca7fb3d6231f331ef72"
+}

@@ -1,0 +1,17 @@
+node_modules/
+dist/
+out/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+.claude-screenshots/
+slides/dist/
+slides/.slidev/
+slides/slides-export.pdf
+electron-shell/settings.json
+mock-printer/forward.json
+docs/script.html
+slides/public/script.html
+CLAUDE.md

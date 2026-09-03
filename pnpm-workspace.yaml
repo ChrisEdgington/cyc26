@@ -1,0 +1,15 @@
+packages:
+  - slides
+  - electron-shell
+  - demo-web
+  - mock-printer
+allowBuilds:
+  electron: true
+  node-hid: true
+  esbuild: true
+  electron-winstaller: true
+  macos-alias: true
+  fs-xattr: true
+  '@parcel/watcher': true
+blockExoticSubdeps: false
+nodeLinker: hoisted

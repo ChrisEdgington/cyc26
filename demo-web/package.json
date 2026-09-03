@@ -1,0 +1,9 @@
+{
+  "name": "demo-web",
+  "private": true,
+  "description": "Shipping Station: a keyboard-only demo page. Shipment ID, package, Enter. Works on http://localhost, blocked on https://, fixed inside the shell.",
+  "scripts": {
+    "dev": "node serve.mjs",
+    "deploy": "wrangler pages deploy . --project-name cyc26-shipping --commit-dirty=true"
+  }
+}
